@@ -1,0 +1,10 @@
+<div id=image style="background-image:url('assets/netflix.jpeg');">
+<div class="container">
+  <h1>LISTS</h1>
+  <%= link_to 'create a list', new_list_path %>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</div>
